@@ -1,0 +1,48 @@
+{
+  "TableName": "SHIPSHAPE_SENSORS_V1",  
+  "KeySchema": [
+    {
+        "KeyType": "HASH",
+        "AttributeName": "LocationId"
+    },
+    {
+        "KeyType": "RANGE",
+        "AttributeName": "Timestamp"
+    }
+],
+  "AttributeDefinitions": [
+    {
+        "AttributeName": "LocationId",
+        "AttributeType": "S"
+    },
+    {
+        "AttributeName": "Timestamp",
+        "AttributeType": "S"
+    },
+    {
+      "AttributeName": "PiName",
+      "AttributeType": "S"
+  },
+  {
+    "AttributeName": "MeasureType",
+    "AttributeType": "S"
+},
+{
+  "AttributeName": "MeasureVal",
+  "AttributeType": "N"
+},
+{
+  "AttributeName": "MeasureUnit",
+  "AttributeType": "S"
+},
+{
+  "AttributeName": "Meta",
+  "AttributeType": "SS"
+}
+
+],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 5,
+    "WriteCapacityUnits": 5
+  }
+}
