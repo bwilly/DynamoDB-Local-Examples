@@ -1,0 +1,68 @@
+DEV-BWLLY-MBP:dynamo_config bwilly$ cat skeleton-full-example-dynamo-Jan20.json 
+{
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "",
+            "AttributeType": "B"
+        }
+    ],
+    "TableName": "",
+    "KeySchema": [
+        {
+            "AttributeName": "",
+            "KeyType": "HASH"
+        }
+    ],
+    "LocalSecondaryIndexes": [
+        {
+            "IndexName": "",
+            "KeySchema": [
+                {
+                    "AttributeName": "",
+                    "KeyType": "HASH"
+                }
+            ],
+            "Projection": {
+                "ProjectionType": "INCLUDE",
+                "NonKeyAttributes": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "GlobalSecondaryIndexes": [
+        {
+            "IndexName": "",
+            "KeySchema": [
+                {
+                    "AttributeName": "",
+                    "KeyType": "HASH"
+                }
+            ],
+            "Projection": {
+                "ProjectionType": "ALL",
+                "NonKeyAttributes": [
+                    ""
+                ]
+            },
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 0,
+                "WriteCapacityUnits": 0
+            }
+        }
+    ],
+    "BillingMode": "PROVISIONED",
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 0,
+        "WriteCapacityUnits": 0
+    },
+    "StreamSpecification": {
+        "StreamEnabled": true,
+        "StreamViewType": "OLD_IMAGE"
+    },
+    "SSESpecification": {
+        "Enabled": true,
+        "SSEType": "KMS",
+        "KMSMasterKeyId": ""
+    }
+}
